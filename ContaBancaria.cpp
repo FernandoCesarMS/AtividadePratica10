@@ -3,6 +3,8 @@
 ContaBancaria::ContaBancaria(string Senha)
 {
     this->senha = Senha;
+    this->numero = 0;
+    this->saldo = 0.0;
 }
 string ContaBancaria::getSenha()
 {
@@ -12,7 +14,7 @@ int ContaBancaria::getNumero()
 {
     return this->numero;
 }
-int ContaBancaria::getSaldo()
+double ContaBancaria::getSaldo()
 {
     return this->saldo;
 }
@@ -24,7 +26,7 @@ void ContaBancaria::setNumero(int Numero)
 {
     this->numero = Numero;
 }
-void ContaBancaria::setSaldo(int Saldo)
+void ContaBancaria::setSaldo(double Saldo)
 {
     this->saldo = Saldo;
 }

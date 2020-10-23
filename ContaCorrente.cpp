@@ -1,16 +1,16 @@
 #include "ContaCorrente.hpp"
 
-ContaCorrente::ContaCorrente(string Nome) : ContaBancaria(Nome)
+ContaCorrente::ContaCorrente(string Senha) : ContaBancaria(Senha)
 {
     this->quantTransacoes = 0;
 }
-bool saca(double valor){
+bool ContaCorrente::saca(double valor){
     return true;
 }
-void deposita(double){
+void ContaCorrente::deposita(double){
 
 }
-void tiraExtrato(){
+void ContaCorrente::tiraExtrato(){
 
 }
 int ContaCorrente::getTransacoes(){
