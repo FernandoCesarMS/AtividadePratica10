@@ -1,11 +1,15 @@
-#ifndef CONTA_HPP
-#define CONTA_HPP
+#ifndef CONTACORRENTE_HPP
+#define CONTACORRENTE_HPP
 
-class Conta{
+class ContaCorrente{
 private:
+    int quantTransacoes;
 
 public:
+    // getters and setters
 
+    int getTransacoes();
+    void setTransacoes();
 };
 
 #endif

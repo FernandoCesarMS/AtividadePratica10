@@ -12,11 +12,12 @@ private:
 
 public:
     ContaBancaria(string);
-    bool saca (double);
-    void deposita(double);
-    void tiraExtrato();
+    virtual bool saca(double) = 0;
+    virtual void deposita(double) = 0;
+    virtual void tiraExtrato() = 0;
+    bool alteraSenha(string);
 
-    //Getters
+    // getters and setters
 
     string getSenha();
     int getNumero();
