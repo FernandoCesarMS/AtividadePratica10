@@ -1,11 +1,17 @@
 #ifndef CONTAPOUPANCA_HPP
 #define CONTAPOUPANCA_HPP
+#include "ContaBancaria.hpp"
 
-class ContaPoupanca{
+class ContaPoupanca : public ContaBancaria
+{
 private:
     double taxaRendimento;
 
 public:
+    ContaPoupanca(string);
+    bool saca(double);
+    void deposita(double);
+    void tiraExtrato();
     // getters and setters
     double getRendimento();
     void setRendimento(double);

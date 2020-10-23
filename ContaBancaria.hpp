@@ -18,7 +18,7 @@ public:
     bool alteraSenha(string);
 
     // getters and setters
-
+    
     string getSenha();
     int getNumero();
     int getSaldo();
