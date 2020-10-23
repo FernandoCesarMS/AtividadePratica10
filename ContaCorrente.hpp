@@ -9,7 +9,7 @@ public:
     // getters and setters
 
     int getTransacoes();
-    void setTransacoes();
+    void setTransacoes(int);
 };
 
 #endif
