@@ -21,7 +21,7 @@ public:
    */
     void deposita(double);
     /**
-   * \brief imprime as transições realizadas (euacho)
+   * \brief imprime as transações realizadas (euacho)
    */
     void tiraExtrato();
 

@@ -2,6 +2,7 @@
 #define CONTABANCARIA_HPP
 #include <string>
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -11,6 +12,7 @@ private:
     string senha; // Senha da conta
     int numero;   // Numero da conta
     double saldo; // Saldo da conta
+    vector <string> transacoes; //armazena operacoes feitas
 
 public:
     /**
