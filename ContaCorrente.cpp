@@ -1,41 +1,38 @@
-#include <iostream>
 #include "ContaCorrente.hpp"
-#include "ContaBancaria.hpp"
 
 ContaCorrente::ContaCorrente(string Senha) : ContaBancaria(Senha)
 {
     this->quantTransacoes = 0;
+    this->transacoes[0] = 0.0;
 }
-bool ContaCorrente::saca(double valor){
-
-    if(getSaldo()>=valor){
-        setSaldo(getSaldo() - valor);
-        transacoes.push_back(-valor);
+bool ContaCorrente::saca(double valor)
+{
+    if(this->getSaldo()>=valor){
+        setSaldo(this->getSaldo() - valor);
+        this->transacoes.push_back(-valor);
         return true;
     }else{
         return false;
     }
-    
 }
-void ContaCorrente::deposita(double valor){
-
-    setSaldo(getSaldo() + valor);
-    transacoes.push_back(+valor);
-
+void ContaCorrente::deposita(double valor)
+{
+    this->setSaldo(this->getSaldo() + valor);
+    this->transacoes.push_back(valor);
 }
-void ContaCorrente::tiraExtrato(){
-
-   for(int i=0; i <= quantTransacoes; i++){
-
-       std::cout<<"Extrato:"<<endl;
-       std::cout<<transacoes[i]<<endl;
-
-   }
-
+void ContaCorrente::tiraExtrato()
+{
+    for(int i = 0; i < this->getTransacoes(); i++){
+        std::cout << this->transacoes[i] << std::endl;
+        std::cout << "---------------------" << std::endl;
+    }
 }
-int ContaCorrente::getTransacoes(){
+int ContaCorrente::getTransacoes()
+{
     return this->quantTransacoes;
 }
-void ContaCorrente::setTransacoes(int Transacoes){
-    this->quantTransacoes = Transacoes;
+void ContaCorrente::setTransacoes(double valor)
+{
+    this->transacoes.push_back(valor);
+    this->quantTransacoes++;
 }

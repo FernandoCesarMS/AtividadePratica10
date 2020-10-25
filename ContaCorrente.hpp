@@ -1,11 +1,12 @@
 #ifndef CONTACORRENTE_HPP
 #define CONTACORRENTE_HPP
 #include "ContaBancaria.hpp"
+#include <vector>
 class ContaCorrente : public ContaBancaria
 {
 private:
     int quantTransacoes; // Quantidade de Transações da Conta Corrente
-
+    vector <double> transacoes;
 public:
     /**
    * \brief Construtor único da classe que recebe como entrada a senha
@@ -27,6 +28,7 @@ public:
 
     // getters and setters
 
+    
     /**
    * \brief \return retorna a quantidade de transações da conta
    */
@@ -34,7 +36,7 @@ public:
     /**
    * \brief recebe como entrada um int que deve ser atribuida ao atributo quantTransacoes
    */
-    void setTransacoes(int);
+    void setTransacoes(double);
 };
 
 #endif

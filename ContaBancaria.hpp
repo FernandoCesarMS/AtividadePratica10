@@ -12,8 +12,7 @@ private:
     string senha; // Senha da conta
     int numero;   // Numero da conta
     double saldo; // Saldo da conta
-    vector <string> transacoes; //armazena operacoes feitas
-
+    vector <double> transacoes;  // Transacoes feitas
 public:
     /**
    * \brief Construtor único da classe que recebe como entrada a senha
@@ -53,6 +52,10 @@ public:
    */
     double getSaldo();
     /**
+   * \brief \return retorna as transacoes
+   */
+    int getTransacoes();
+    /**
    * \brief recebe como entrada uma string que deve ser atribuida ao atributo senha
    */
     void setSenha(string);
@@ -64,6 +67,10 @@ public:
    * \brief recebe como entrada um double que deve ser atribuida ao atributo saldo
    */
     void setSaldo(double);
+    /**
+   * \brief salva todas as transacoes
+   */
+    void setTransacoes(double);
 };
 
 #endif

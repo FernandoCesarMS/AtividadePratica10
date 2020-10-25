@@ -6,7 +6,7 @@ class ContaPoupanca : public ContaBancaria
 {
 private:
     double taxaRendimento; // Taxa de Rendimento da Conta Poupança
-
+    vector <double> transacoes;
 public:
     /**
    * \brief Construtor único da classe que recebe como entrada a senha
@@ -27,6 +27,14 @@ public:
     void tiraExtrato();
     // getters and setters
 
+    /**
+   * \brief \return retorna as transacoes
+   */
+    int getTransacoes();
+    /**
+   * \brief salva todas as transacoes
+   */
+    void setTransacoes(double);
     /**
    * \brief \return retorna o rendimento da conta poupança
    */

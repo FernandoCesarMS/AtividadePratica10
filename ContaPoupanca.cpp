@@ -6,12 +6,13 @@
 ContaPoupanca::ContaPoupanca(string Senha) : ContaBancaria(Senha)
 {
     this->taxaRendimento = 0.0;
+    this->transacoes[0] = 0.0;
 }
 bool ContaPoupanca::saca(double valor)
 {
-     if(getSaldo()>=valor){
-        setSaldo(getSaldo() - valor);
-        transacoes.push_back(-valor);
+     if(this->getSaldo()>=valor){
+        setSaldo(this->getSaldo() - valor);
+        this->transacoes.push_back(-valor);
         return true;
     }else{
         return false;
@@ -19,20 +20,23 @@ bool ContaPoupanca::saca(double valor)
 }
 void ContaPoupanca::deposita(double valor)
 {
-
-    setSaldo(getSaldo() + valor);
-    transacoes.push_back(+valor);
+    setSaldo(this->getSaldo() + valor);
+    this->transacoes.push_back(valor);
 }
 void ContaPoupanca::tiraExtrato()
 {
-
-    for(int i=0; i <= quantTransacoes; i++){
-
-       std::cout<<"Extrato:"<<endl;
-       std::cout<<transacoes[i]<<endl;
-
-   }
-    
+    for(int i = 0; i < this->transacoes.size(); i++){
+        std::cout << this->transacoes[i] << std::endl;
+        std::cout << "---------------------" << std::endl;
+    }   
+}
+int ContaBancaria::getTransacoes()
+{
+    return this->transacoes.size();
+}
+void ContaBancaria::setTransacoes(double valor)
+{
+    this->transacoes.push_back(valor);
 }
 double ContaPoupanca::getRendimento()
 {
