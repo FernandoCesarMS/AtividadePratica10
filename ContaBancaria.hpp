@@ -31,6 +31,7 @@ public:
    * \brief imprime as transições realizadas (euacho)
    */
     virtual void tiraExtrato() = 0;
+    virtual double getRendimento() = 0;
     /**
    * \brief recebe uma variavel do tipo string que deve ser o atribuida ao atributo senha.
    * \return true se a alteração foi feita com sucesso, false caso não tenha sido

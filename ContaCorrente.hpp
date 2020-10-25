@@ -25,7 +25,7 @@ public:
    * \brief imprime as transações realizadas (euacho)
    */
     void tiraExtrato();
-
+    double getRendimento();
     // getters and setters
 
     

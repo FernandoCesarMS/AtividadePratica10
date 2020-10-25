@@ -1,7 +1,5 @@
 #include <iostream>
 #include "ContaPoupanca.hpp"
-#include "ContaBancaria.hpp"
-#include "ContaCorrente.hpp"
 
 ContaPoupanca::ContaPoupanca(string Senha) : ContaBancaria(Senha)
 {

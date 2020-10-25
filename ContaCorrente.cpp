@@ -36,3 +36,6 @@ void ContaCorrente::setTransacoes(double valor)
     this->transacoes.push_back(valor);
     this->quantTransacoes++;
 }
+double ContaCorrente::getRendimento(){
+    return 0.0;
+}

@@ -12,6 +12,7 @@ public:
    * \brief Construtor único da classe que recebe como entrada a senha
    */
     ContaPoupanca(string);
+    ContaPoupanca();
     /**
    * \brief recebe uma variavel do tipo double que deve ser subtrair o valor do saldo
    * \return true se for possivel executar o saque, false caso não seja

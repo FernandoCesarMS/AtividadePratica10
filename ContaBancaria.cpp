@@ -62,7 +62,7 @@ int ContaBancaria::getTransacoes()
 }
 void ContaBancaria::setSenha(string Senha)
 {
-    this->senha = Senha
+    this->senha = Senha;
 }
 void ContaBancaria::setNumero(int Numero)
 {
